@@ -12,7 +12,7 @@ vector<int> specialCost = { 800,2800,6140 };
 int over20Possible = 22;
 int over40Possible = 4;
 int basic = 2060;
-int present = 0;
+int present = 9000;
 int day = 0;
 bool isEnd(int a, int b, int c, int d) {
 	if (a != 63)
@@ -88,6 +88,5 @@ int main() {
 		day++;
 	}
 	cout << day << "ÀÏ " << basic << " ÇÏ·ç °¹¼ö";
-	cin >> basic;
 	return 0;
 }
