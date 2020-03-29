@@ -87,6 +87,8 @@ int main() {
 		normalCal(10);
 		day++;
 	}
+	int cost = normal[3] * 1400 + normal[7] * 6520 + normal[11] * 13040 + special[3] * 7780;
 	cout << day << "ÀÏ " << basic << " ÇÏ·ç °¹¼ö";
+	cout << endl << cost << " " << cost / 3800+1;
 	return 0;
 }
