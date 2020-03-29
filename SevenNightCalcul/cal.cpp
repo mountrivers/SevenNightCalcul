@@ -89,6 +89,6 @@ int main() {
 	}
 	int cost = normal[3] * 1400 + normal[7] * 6520 + normal[11] * 13040 + special[3] * 7780;
 	cout << day << "일 " << basic << " 하루 갯수";
-	cout << endl << cost << " " << cost / 3800+1;
+	cout << endl << "이후 모두 만렙가지 필요 인연의 실 : "<<cost << " 필요 일" << cost / 3800+1;
 	return 0;
 }
