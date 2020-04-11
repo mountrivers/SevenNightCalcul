@@ -96,6 +96,7 @@ int main() {
 	cout << day << "일 " << basic << " 하루 갯수";
 	cout << endl << "이후 모두 만렙가지 필요 인연의 실 : "<<cost << " 필요 일" << cost / 3800+1;
 
-	cout << endl << "all : " << allCost << " / " << allCost + cost;
+	cout << endl << "총합 : " << allCost << " / " << allCost + cost;
 	return 0;
 }
+
