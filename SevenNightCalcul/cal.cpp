@@ -73,23 +73,33 @@ void specialCal(int n) {
 int main() {
 	normal[0] = 85;
 	special[0] = 18;
-
 	while (isEnd(normal[3], normal[7], normal[11], special[3]) ){
 		present += basic;
-		normalCal(0);
-		normalCal(1);
+		if(normal[0] > 0)
+			normalCal(0);
+		if (normal[1] > 0)
+			normalCal(1);
 		specialCal(0);
-		normalCal(2);
-		normalCal(4);
-		normalCal(3);
+		if (normal[2] > 0)
+			normalCal(2);
+		if (normal[4] > 0)
+			normalCal(4);
+		if (normal[3] > 0)
+			normalCal(3);
 		specialCal(1);
-		normalCal(5);
-		normalCal(6);
+		if (normal[5] > 0)
+			normalCal(5);
+		if (normal[6] > 0)
+			normalCal(6);
 		specialCal(2);
-		normalCal(7);
-		normalCal(8);
-		normalCal(9);
-		normalCal(10);
+		if (normal[7] > 0)
+			normalCal(7);
+		if (normal[8] > 0)
+			normalCal(8);
+		if (normal[9] > 0)
+			normalCal(9);
+		if (normal[10] > 0)
+			normalCal(10);
 		day++;
 	}
 	int cost = normal[3] * 1400 + normal[7] * 6520 + normal[11] * 13040 + special[3] * 7780;
