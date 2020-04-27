@@ -14,6 +14,7 @@ int over40Possible = 4;
 int basic = 2060;
 int present = 9000;
 int day = 0;
+int allCost = 0; 
 bool isEnd(int a, int b, int c, int d) {
 	if (a != 63)
 		return true;
@@ -33,6 +34,7 @@ void normalCal(int n) {
 			normal[n + 1]++;
 			basic += 4;
 			present -= normalCost[n];
+			allCost += normalCost[n];
 			over20Possible--;
 		}
 	}
@@ -42,6 +44,7 @@ void normalCal(int n) {
 			normal[n + 1]++;
 			basic += 4;
 			present -= normalCost[n];
+			allCost += normalCost[n];
 			over40Possible--;
 		}
 	}
@@ -54,6 +57,7 @@ void normalCal(int n) {
 			else
 				basic += 4;
 			present -= normalCost[n];
+			allCost+= normalCost[n];
 		}
 	}
 }
@@ -63,6 +67,7 @@ void specialCal(int n) {
 		special[n + 1]++;
 		basic += 4;
 		present -= specialCost[n];
+		allCost += specialCost[n];
 	}
 }
 int main() {
@@ -90,5 +95,7 @@ int main() {
 	int cost = normal[3] * 1400 + normal[7] * 6520 + normal[11] * 13040 + special[3] * 7780;
 	cout << day << "일 " << basic << " 하루 갯수";
 	cout << endl << "이후 모두 만렙가지 필요 인연의 실 : "<<cost << " 필요 일" << cost / 3800+1;
+
+	cout << endl << "all : " << allCost << " / " << allCost + cost;
 	return 0;
 }
